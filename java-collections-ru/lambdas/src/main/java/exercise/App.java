@@ -10,6 +10,7 @@ public class App {
                 .map(s -> Arrays.stream(s)
                         .flatMap(str -> Stream.of(str, str))
                         .toArray(String[]::new))
+                .flatMap(arr -> Stream.of(arr, arr))
                 .toArray(String[][]::new);
     }
 }
